@@ -1,6 +1,6 @@
 # 💤 Baracuda — Personal LazyVim Config
 
-A personal Neovim configuration built on top of the [LazyVim](https://github.com/LazyVim/LazyVim) starter template, assembled by hand-typing along with [Takuya Matsuyama's (craftzdog)](https://github.com/craftzdog) devaslife YouTube setup.
+A personal Neovim configuration built on top of the [LazyVim](https://github.com/LazyVim/LazyVim) starter template, assembled by hand-typing along with [Takuya Matsuyama's (craftzdog)](https://github.com/craftzdog) devaslife YouTube setup — [watch it here](https://www.youtube.com/watch?v=fFHlfbKVi30).
 
 ## Requirements
 
@@ -115,6 +115,8 @@ lua/
 
 > [!WARNING]
 > This will overwrite your current Neovim configuration. Back it up first if needed.
+
+Optionally, [watch the tutorial video](https://www.youtube.com/watch?v=fFHlfbKVi30) this setup is based on first.
 
 ```sh
 # Linux/macOS
