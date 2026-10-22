@@ -106,9 +106,8 @@ lua/
 
 | Key      | Mode   | Action                                                                 |
 | -------- | ------ | ------------------------------------------------------------------------ |
-| `<Tab>`  | Insert | Accept the highlighted suggestion (or jump to the next snippet placeholder, or just insert a tab if there's nothing to accept) |
+| `<Tab>` / `<CR>` | Insert | Accept the highlighted suggestion (`<Tab>` also jumps to the next snippet placeholder, or just inserts a tab, if there's nothing to accept) |
 | `<Esc>`  | Insert | Close the completion menu (undoing any preview) instead of leaving it open |
-| `<CR>`   | Insert | Always behaves like a plain Enter — never auto-accepts a suggestion       |
 | `<Up>` / `<Down>` | Insert | Move through the suggestion list                               |
 
 ## Installation
