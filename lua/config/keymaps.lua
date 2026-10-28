@@ -46,3 +46,6 @@ keymap.set("n", "<C-w><down>", "<C-w>-")
 keymap.set("n", "<C-j>", function()
   vim.diagnostic.jump({ count = 1, float = true })
 end, opts)
+
+-- Insert mode: Ctrl+Backspace deletes the previous word, like Windows.
+keymap.set("i", "<C-BS>", "<C-w>", opts)

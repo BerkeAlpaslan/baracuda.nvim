@@ -16,6 +16,9 @@ return {
         -- Esc closes the completion menu (undoing any preview) instead of
         -- leaving a suggestion lingering, then falls back to normal <Esc>
         ["<Esc>"] = { "cancel", "fallback" },
+        -- Windows Terminal doesn't forward Ctrl+Space to console apps at all
+        -- (confirmed empirically), so <C-l> is the manual trigger instead
+        ["<C-l>"] = { "show", "show_documentation", "hide_documentation" },
       },
     },
   },

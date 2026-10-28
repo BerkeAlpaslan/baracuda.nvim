@@ -42,9 +42,14 @@ lua/
 - `linting.eslint`, `formatting.prettier`
 - `lang.rust`, `lang.typescript`, `lang.json` — Rust, TypeScript/JavaScript, JSON
 - `lang.dotnet` — C#/.NET (Omnisharp, debugging, `csharpier` formatting)
-- `lang.markdown` — Markdown (`marksman` LSP, live preview, linting)
+- `lang.markdown` — Markdown (`marksman` LSP, live preview); the bundled `markdownlint-cli2` linter is disabled in `lua/plugins/lsp.lua` since its default rules (80-char lines, no inline HTML, ...) fire on almost every line of normal prose
 - `lang.sql` — SQL (`vim-dadbod`/`dbui` client, `sqlfluff` linting)
+- `lang.docker` — Dockerfile/Compose (`dockerls`, `hadolint` linting)
+- `lang.yaml` — YAML (`yamlls` with schema store support)
 - `util.mini-hipatterns`
+- `ui.treesitter-context` — sticky scroll: pins the current block/function's opening line(s) at the top of the window while scrolling (`<leader>ut` to toggle)
+
+**Extra Mason tools** (`lua/plugins/lsp.lua`, not tied to a LazyVim extra): `powershell_es` for PowerShell (`.ps1`), plus Lua/shell tooling (`stylua`, `selene`, `luacheck`, `shellcheck`, `shfmt`) and a few web LSPs (`tailwindcss-language-server`, `typescript-language-server`, `css-lsp`).
 
 **Discipline:** `lua/baracuda/discipline.lua` throttles `h`/`j`/`k`/`l` — spam one of them 10+ times in under 2 seconds and it nudges you ("Hold it Cowboy! 🤠") instead of moving the cursor, to encourage using proper motions/search instead.
 
@@ -62,6 +67,7 @@ lua/
 | `<C-a>`   | Normal | Select the entire buffer                                      |
 | `<C-m>`   | Normal | Jump forward in the jumplist (replaces the default Enter behavior) |
 | `<C-j>`   | Normal | Jump to the next diagnostic                                    |
+| `<C-BS>`  | Insert | Delete the previous word, like Windows                        |
 
 ### Tabs
 
@@ -109,6 +115,7 @@ lua/
 | `<Tab>` / `<CR>` | Insert | Accept the highlighted suggestion (`<Tab>` also jumps to the next snippet placeholder, or just inserts a tab, if there's nothing to accept) |
 | `<Esc>`  | Insert | Close the completion menu (undoing any preview) instead of leaving it open |
 | `<Up>` / `<Down>` | Insert | Move through the suggestion list                               |
+| `<C-l>`  | Insert | Manually open the completion menu (`<C-space>` doesn't work here — Windows Terminal doesn't forward Ctrl+Space to console apps) |
 
 ## Installation
 
