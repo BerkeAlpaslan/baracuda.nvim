@@ -67,7 +67,7 @@ lua/
 | `<C-a>`   | Normal | Select the entire buffer                                      |
 | `<C-m>`   | Normal | Jump forward in the jumplist (replaces the default Enter behavior) |
 | `<C-j>`   | Normal | Jump to the next diagnostic                                    |
-| `<C-BS>`  | Insert | Delete the previous word, like Windows                        |
+| `<C-BS>`  | Insert | Delete the previous word, like Windows (also bound to `<C-h>`, since that's what this terminal actually sends) |
 
 ### Tabs
 
@@ -112,7 +112,7 @@ lua/
 
 | Key      | Mode   | Action                                                                 |
 | -------- | ------ | ------------------------------------------------------------------------ |
-| `<Tab>` / `<CR>` | Insert | Accept the highlighted suggestion (`<Tab>` also jumps to the next snippet placeholder, or just inserts a tab, if there's nothing to accept) |
+| `<Tab>` / `<CR>` / `<Right>` | Insert | Accept the highlighted suggestion (`<Tab>` also jumps to the next snippet placeholder, or just inserts a tab, if there's nothing to accept) |
 | `<Esc>`  | Insert | Close the completion menu (undoing any preview) instead of leaving it open |
 | `<Up>` / `<Down>` | Insert | Move through the suggestion list                               |
 | `<C-l>`  | Insert | Manually open the completion menu (`<C-space>` doesn't work here — Windows Terminal doesn't forward Ctrl+Space to console apps) |

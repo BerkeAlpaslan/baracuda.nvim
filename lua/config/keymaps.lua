@@ -48,4 +48,7 @@ keymap.set("n", "<C-j>", function()
 end, opts)
 
 -- Insert mode: Ctrl+Backspace deletes the previous word, like Windows.
+-- <C-BS> alone doesn't fire in this terminal, so also bind <C-h>, which
+-- is what Ctrl+Backspace actually sends here (confirmed empirically).
 keymap.set("i", "<C-BS>", "<C-w>", opts)
+keymap.set("i", "<C-h>", "<C-w>", opts)
